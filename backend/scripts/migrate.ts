@@ -1,8 +1,3 @@
-/**
- * Simple migration runner: executes db/schema.sql against the configured
- * PostgreSQL database. For a larger project, swap this for node-pg-migrate
- * or Prisma Migrate — kept minimal here so the schema is easy to review.
- */
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';

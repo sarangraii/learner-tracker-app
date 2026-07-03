@@ -13,13 +13,13 @@ import { api } from '@/lib/api';
 const LEARNER_ID_STORAGE_KEY = 'orion_lms_learner_id';
 
 export type WizardStep =
-  | 'ai-knowledge' // Step 1 of 5
-  | 'programming-experience' // Step 2 of 5
-  | 'tech-skills' // Step 3 of 5 (experienced devs)
-  | 'want-to-learn' // Alternative step (non-programmers)
-  | 'main-goal' // Step 4 of 5
-  | 'recommendation' // Step 5 of 5 — results
-  | 'roadmap'; // Final roadmap screen
+  | 'ai-knowledge'
+  | 'programming-experience'
+  | 'tech-skills' // experienced devs only
+  | 'want-to-learn' // shown instead of tech-skills when no programming experience
+  | 'main-goal'
+  | 'recommendation'
+  | 'roadmap';
 
 interface OnboardingContextValue {
   step: WizardStep;
